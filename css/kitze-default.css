@@ -1,3 +1,5 @@
+@import url('http://okame.ru/assets/fonts/Eurofurence/eurofurence.css');
+	
 body {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 12px;
@@ -66,6 +68,8 @@ body {
 }
 
 .navbar-default .navbar-brand {
+    font-family: "Eurofurence";
+    font-size: 24px;
     width: 217px;
     margin-right: 0px;
     color: #fff;
@@ -76,8 +80,11 @@ body {
 }
 
 .navbar-default ul li {
-    background: #0277BD;
+    background: #6bb0e5;
     margin-right: 1px;
+}
+.navbar-default ul li {
+    border-bottom: 2px solid #444;
 }
 
 .navbar-default .navbar-nav>li>a {
