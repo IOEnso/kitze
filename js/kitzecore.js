@@ -1,9 +1,9 @@
 $("document").ready(function() {
-	// Get code from Save URL
+	// Добываем код сохранения
 	var code = getUrlVars()["code"];
     var libs = {};
     
-    // List of Frameworks & Extensions
+    // Список фреймворков и дополнений
     var frameworks = {
         // jQuery
         "jQuery Compat (edge)": "http://code.jquery.com/jquery-git.js",
@@ -220,7 +220,7 @@ $("document").ready(function() {
 	modalSave.find(".modal-body").html(window.location.href);
 	modalSave.modal('show');
 	}
-    // Frameworks & Extensions Dropdown
+    // Ввыпадающее меню (фоеймворк и дополнения)
     $("#dropdownMenu1 li a").click(function(event){
         event.preventDefault();
         
@@ -237,7 +237,7 @@ $("document").ready(function() {
             dropdown.append("<div class='extra checkbox'><label><input type='checkbox'></input><span class='chk_lbl'>" + extra + "</span></label></div>");
     });
     
-    // Script Injection Dropdown
+    // Ввыпадающее меню (скрипты)
     $("#dropdownMenu2 li a").click(function(event){
         event.preventDefault();
         
@@ -247,7 +247,7 @@ $("document").ready(function() {
         dropdown.find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
     });
     
-    // Doctype Dropdown
+    // Ввыпадающее меню (DOCTYPE)
     $("#dropdownMenu3 li a").click(function(event){
         event.preventDefault();
         
@@ -257,7 +257,7 @@ $("document").ready(function() {
         dropdown.find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
     });
     
-    // HTML Dropdown
+    // Ввыпадающее меню (HTML))
     $("#dropdownMenu4 li a").click(function(event){
         event.preventDefault();
         
@@ -267,7 +267,7 @@ $("document").ready(function() {
         dropdown.find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
     });
     
-    // CSS Dropdown
+    // Ввыпадающее меню (CSS)
     $("#dropdownMenu5 li a").click(function(event){
         event.preventDefault();
         
@@ -277,7 +277,7 @@ $("document").ready(function() {
         dropdown.find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
     });
     
-    // Javascript Dropdown
+    // Ввыпадающее меню (JS)
     $("#dropdownMenu6 li a").click(function(event){
         event.preventDefault();
         
@@ -287,7 +287,7 @@ $("document").ready(function() {
         dropdown.find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
     });
     
-    // RUN Button
+    // Функция запуска
     $("#btnRun").click(function(event) {  
         event.preventDefault();
         
@@ -335,15 +335,15 @@ $("document").ready(function() {
         previewDoc.close();
     });
 
-    // Preview code on page load
+    // Запуск
     $("#btnRun").click();
-    // SAVE Button
+    // Функция сохранения
 	$("#btnSave").click(function(event) {
 	event.preventDefault();  
 	var encrypted = CryptoJS.AES.encrypt(getSaveContent(), "secret_pass"); 
 	window.location.replace(window.location.protocol  + "//" + window.location.host + "/?code=" + encrypted.toString());
 	});
-    // TIDYUP Button
+    // Функция сброса
     $("#btnTidyUp").click(function(event) {
         event.preventDefault();
         
@@ -363,7 +363,7 @@ $("document").ready(function() {
         ace.edit("js-editor").getSession().setValue(js2);
     });
 
- // HELPER Functions
+ // Добываем содержимое из...
 	function getSaveContent() {
 	var css    = ace.edit("css-editor").getSession().getValue();
 	var script = ace.edit("js-editor").getSession().getValue();
@@ -377,7 +377,7 @@ $("document").ready(function() {
 	ace.edit("html-editor").getSession().setValue(html);
 	}
 	
-	// Read a page's GET URL variables and return them as an associative array.
+	// Считываем переменные из url и создаем ассоциативный массив
 	function getUrlVars() {
 	var vars = [], hash;
 	var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
@@ -391,7 +391,7 @@ $("document").ready(function() {
 	return vars;
 }  
 
-    // Together Button
+    //TogetherJS
     $("#btnTogether").click(function(event) {
       event.preventDefault();
 
