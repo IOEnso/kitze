@@ -59,7 +59,7 @@ body {
 }
 
 .navbar-default {
-    background: #6eb6ee;
+    background: /*#6eb6ee*/#CC0000;
     border-color: #cecece;
     border-radius: 0px;
     border: none;
