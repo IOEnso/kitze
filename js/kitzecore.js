@@ -1,6 +1,7 @@
-$("document").ready(function() {
+/*$("document").ready(function() {
 	// Добываем код сохранения
 	var code = getUrlVars()["code"];
+	*/
     var libs = {};
     
     // Список фреймворков и дополнений
